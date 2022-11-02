@@ -1,11 +1,11 @@
 version: '2'
 
 services:
-    asdf:
+    rosbot_xl_gazebo_spawn:
         build:
-            context: ../
-            dockerfile: eg2/Dockerfile
-        image: eg2_asdf:latest
+            context: .
+            dockerfile: Dockerfile
+        image: rosbot_xl_gazebo_spawn:latest
         environment:
             - DISPLAY
         volumes:

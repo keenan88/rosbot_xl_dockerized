@@ -20,5 +20,5 @@ RUN git clone https://github.com/husarion/gazebo_worlds.git; cd gazebo_worlds; g
 
 RUN rosdep install --from-paths rosbot_hardware_interfaces rosbot_controllers gz_ros2_control gazebo_worlds -y --ignore-src
 
-ADD ./eg2/ros_entrypoint.sh /container-start.sh
+ADD ros_entrypoint.sh /container-start.sh
 RUN chmod +x /container-start.sh
