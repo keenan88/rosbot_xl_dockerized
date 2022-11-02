@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    asdf:
+        build:
+            context: ../
+            dockerfile: eg2/Dockerfile
+        image: eg2_asdf:latest
+        environment:
+            - DISPLAY
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix:rw
+        entrypoint: /container-start.sh
+        command: sleep infinity
+        stdin_open: true
+        tty: true
